@@ -1,11 +1,13 @@
+import java.util.ArrayList;
+
 class QuestionMultipleChoise extends Question{
-	public ArrayList<boolean> verificaResposta(ArrayList<int> altenativaUser){
-		ArrayList<boolean> result = new ArrayList<boolean>();
+	public ArrayList<Boolean> verificaResposta(ArrayList<Integer> altenativaUser){
+		ArrayList<Boolean> result = new ArrayList<Boolean>();
 
 		for(int alternativa : altenativaUser){
-			result.add(this.altenativas.get(altenativa).isCerta());
+			result.add(this.alternativas.get(alternativa).isCerta());
 		}
 
-		return result
+		return result;
 	}
 }
