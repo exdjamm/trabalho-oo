@@ -1,12 +1,12 @@
 public class User {
-	private String nome;
+	private String login;
 	private int score;
 
-	public String getNome (){
-		return this.nome;
+	public String getLogin (){
+		return this.login;
 	}
-	public void setNome(String nome){
-		this.nome = nome;
+	public void setLogin(String login){
+		this.login = login;
 	}
 	public void setScore(int score){
 		this.score = score;
