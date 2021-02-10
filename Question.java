@@ -2,14 +2,14 @@ import java.util.ArrayList;
 
 public class Question {
 	private String pergunta;
-	private ArrayList<Resposta> altenativas = new ArrayList<Resposta>();
+	protected ArrayList<Resposta> alternativas = new ArrayList<Resposta>();
 
 	public void addAlternativa(String textoResposta, boolean essaCorreta){
 		Resposta altenativa = new Resposta(textoResposta);
 		altenativa.setCerta(essaCorreta);
 
-		if (this.altenativas.size() < 5){
-			altenativas.add(altenativa)
+		if (this.alternativas.size() < 5){
+			alternativas.add(altenativa);
 		}
 	}
 
@@ -22,10 +22,10 @@ public class Question {
 	}
 
 	// Mudar
-	public ArrayList<String> getAlternativas(){
-		return this.altenativas;
+	public ArrayList<Resposta> getAlternativas(){
+		return this.alternativas;
 	}
 	public boolean verificaResposta(int altenativaUser){
-		return this.altenativas.get(altenativaUser).isCerta();
+		return this.alternativas.get(altenativaUser).isCerta();
 	}
 }
