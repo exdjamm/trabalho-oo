@@ -13,4 +13,8 @@ class Resposta{
 	public boolean isCerta(){
 		return this.certa;
 	}
+	
+	public String getTexto(){
+		return this.texto;
+	}
 }
